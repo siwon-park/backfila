@@ -1,6 +1,7 @@
 package app.cash.backfila.dashboard
 
 import app.cash.backfila.service.persistence.BackfilaDb
+import app.cash.backfila.service.persistence.BackfillPartitionState
 import app.cash.backfila.service.persistence.BackfillState
 import app.cash.backfila.service.persistence.DbBackfillRun
 import app.cash.backfila.service.persistence.DbEventLog
@@ -26,7 +27,7 @@ import misk.web.mediatype.MediaTypes
 data class UiPartition(
   val id: Long,
   val name: String,
-  val state: BackfillState,
+  val state: BackfillPartitionState,
   val pkey_cursor: String?,
   val pkey_start: String?,
   val pkey_end: String?,
